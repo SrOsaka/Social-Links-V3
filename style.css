@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./assets/Rainy\ day\ kitty.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'Mono';
+    src: url(./assets/Monocraft.ttf);
+}
+
+.container {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#pai {
+    width: 720px;
+    margin: auto;
+}
+
+#backgroundtop {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px 10px 0 0;
+    background-image: url(./assets/background.gif);
+    background-repeat: no-repeat;
+}
+
+#card {
+    width: 100%;
+    height: 300px;
+    background-color: #7c2bbea9;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(15px);
+}
+
+#card1 {
+    width: 100%;
+    height: 100px;
+    background-color: #7c2bbea9;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+}
+
+#card2 {
+    width: 100%;
+    height: 100px;
+    background-color: #7c2bbea9;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#perfil {
+    display: flex;
+    color: white;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: -50px;
+    margin-left: 18px;
+}
+
+p{
+    margin-bottom: 0px !important;
+}
+
+#nome {
+    margin: 10px 0 0 18px;
+}
+
+#containervulgo {
+    display: flex;
+    margin-left: 18px;
+    margin-top: 14px;
+}
+
+#vulgo {
+    color: red;
+    border: 1.5px solid red;
+    padding: 2px 6px;
+    border-radius: 30px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+#informacoes {
+    margin-left: 18px;
+    color: #A1A1A1;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 14px;
+}
+
+#localizacao {
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+    margin-top: 14px;
+    font-family: "Unbounded", sans-serif;
+    color: #A1A1A1;
+    font-size: 12px;
+}
+
+#imgloc {
+    margin-right: 2px;
+}
+
+#imgprofile {
+    width: 80px;
+    border-radius: 10px;
+}
+
+#discordtext {
+    margin-left: 18px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #A1A1A1;
+    width: 100%;
+}
+
+#discord {
+    font-family: 'Mono';
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#containerbotao {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-right: 20px;
+}
+
+a {
+    border-radius: 10px !important;
+    border: transparent !important;
+    padding: 6px 14px !important;
+    color: #A1A1A1 !important;
+    background-color: #1e1e1e79 !important;
+    text-decoration: none !important;
+}
+
+
+#musicimg {
+    width: 80px;
+    border-radius: 10px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os elementos */
+    width: 100%; /* Ajusta a largura do player para 100% do contêiner pai */
+    max-width: 360px; /* Define a largura máxima do player */
+}
+
+.controls, .volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os controles e a barra de progresso */
+}
+
+#playPause {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #0500FF; /* Cor do ícone de play/pause */
+    cursor: pointer;
+    margin-left: 18px;
+    margin-top: 6px;
+}
+
+.progress-container {
+    position: relative;
+    width: 360px; /* Largura da barra de progresso da música */
+}
+
+.volume-container {
+    position: relative;
+    width: 50px; /* Largura da barra de volume */
+}
+
+#progressBar, #volumeBar {
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgba(30, 30, 30, 0.5); /* Fundo da barra de progresso */
+    height: 8px;
+    border-radius: 5px;
+    position: relative;
+}
+
+#progressBar::-webkit-slider-thumb, #volumeBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #0500FF; /* Cor do "thumb" ou bolinha */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0500FF;
+    position: relative;
+    z-index: 1;
+}
+
+#progressTrack, #volumeTrack {
+    position: absolute;
+    top: 40%; /* Removido o translateY */
+    left: 0;
+    height: 10px;
+    background-color: #0500FF; /* Cor do rastro */
+    border-radius: 5px;
+    z-index: 0;
+}
+
+#progressTrack {
+    width: 0%; /* A largura será atualizada pelo JS */
+}
+
+#volumeTrack {
+    width: 100%; /* Inicializa o volume com 100% */
+}
+
+span {
+    font-size: 14px;
+    color: #A1A1A1; /* Cor do texto de tempo */
+
+}
+
+#nomemusica {
+    margin-left: 18px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    #volumeBar::-webkit-slider-thumb {
+        background-color: #0400ff00;
+        box-shadow: 0 0 0px #ffffff;
+    }
+
+    .volume-container {
+        position: relative;
+        width: 0px; /* Largura da barra de volume */
+    }
+
+    .progress-container {
+        position: relative;
+        width: 100%; /* Largura da barra de progresso da música */
+    }
+}
+
+@media (max-width: 768px) {
+    .progress-container {
+        position: relative;
+        width: 100%; /* Largura da barra de progresso da música */
+    }
+}
