@@ -230,6 +230,16 @@ a {
     z-index: 1;
 }
 
+#progressBar::-moz-range-thumb, #volumeBar::-moz-range-thumb {
+    background-color: #0500FF; /* Cor do "thumb" ou bolinha azul */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0500FF;
+    position: relative;
+    z-index: 1;
+    border: #0500FF !important;
+}
+
 #progressTrack, #volumeTrack {
     position: absolute;
     top: 40%; /* Removido o translateY */
@@ -284,7 +294,7 @@ span {
     }
 }
 
-@media (max-width: 314px) {
+@media (max-width: 300px) {
     #musicimg {
         width: 0px;
         border-radius: 10px;
@@ -300,7 +310,7 @@ span {
     }
 }
 
-@media (max-width: 260px) {
+@media (max-width: 300px) {
     #card1 {
         padding-left: 0;
     }
@@ -324,6 +334,18 @@ span {
     #volumeBar::-webkit-slider-thumb {
         background-color: #0400ff00;
         box-shadow: 0 0 0px #ffffff;
+    }
+
+    #progressBar::-moz-range-thumb, #volumeBar::-moz-range-thumb {
+        width: 0;
+        height: 0;
+        background-color: transparent; /* Cor do "thumb" ou bolinha azul */
+        border-radius: 0;
+        cursor: pointer;
+        box-shadow: 0 0 0px;
+        position: relative;
+        z-index: 1;
+        border: 0 !important;
     }
 
 }
