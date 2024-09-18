@@ -74,7 +74,7 @@ body {
     color: white;
     font-family: "Unbounded", sans-serif;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 26px;
     margin-top: -50px;
     margin-left: 18px;
 }
@@ -114,7 +114,7 @@ p{
 
 #localizacao {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-left: 18px;
     margin-top: 14px;
     font-family: "Unbounded", sans-serif;
@@ -258,7 +258,7 @@ span {
     margin-left: 18px;
     font-family: "Unbounded", sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @media (max-width: 480px) {
@@ -276,6 +276,38 @@ span {
         position: relative;
         width: 100%; /* Largura da barra de progresso da música */
     }
+
+    #containerbotao {
+        width: 50%;
+        display: block;
+        justify-content: initial;
+    }
+}
+
+@media (max-width: 314px) {
+    #musicimg {
+        width: 0px;
+        border-radius: 10px;
+    }
+
+    #imgprofile {
+        width: 0px;
+        border-radius: 10px;
+    }
+
+    #feliz {
+        font-size: 0;
+    }
+}
+
+@media (max-width: 260px) {
+    #card1 {
+        padding-left: 0;
+    }
+
+    #card2 {
+        padding-left: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -283,4 +315,15 @@ span {
         position: relative;
         width: 100%; /* Largura da barra de progresso da música */
     }
+
+    .volume-container {
+        position: relative;
+        width: 0px; /* Largura da barra de volume */
+    }
+
+    #volumeBar::-webkit-slider-thumb {
+        background-color: #0400ff00;
+        box-shadow: 0 0 0px #ffffff;
+    }
+
 }
